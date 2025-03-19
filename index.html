@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>名古屋支店ハッカソン スライド</title>
+  <!-- Reveal.jsのCSS（ベースとテーマ） -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/sky.css" id="theme"> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/simple.css" id="theme"> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/moon.css" id="theme">   -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/black.css" id="theme"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/white.css" id="theme">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="reveal">
+  <div class="slides">
+
+    <!-- タイトルスライド -->
+    <section>
+      <h1>第1回 生成AI×Web ハッカソン</h1>
+      <h3>in 名古屋支店</h3>
+      <p>主催: 豊岡、村垣</p>
+      <p>協力: 石崎さん、神谷さん</p>
+      <p>日程: 2025年3月20日 (13:00～18:00)</p>
+      <p>※ <strong>esc</strong> または <strong>o（オー）</strong> を押すとスライド一覧が表示されます</p>
+      <p>※ この資料は共有します</p>
+    </section>
+
+    <!-- 事前説明 セクション -->
+    <section>
+      <!-- 見出しスライド -->
+      <section>
+        <h2>事前説明セクション</h2>
+        <h3>13:00～13:20</h3>
+        <p>本日の流れや目的を共有します</p>
+        <p>↓矢印で次のスライドへ</p>
+      </section>
+
+      <!-- 最初にひとこと -->
+      <section>
+        <h3>最初にひとこと</h3>
+        <ul>
+          <li>本日はお忙しい中、参加いただきありがとうございます</li>
+          <li>トイレや休憩は自由に行ってください</li>
+          <li>楽しんでいただければOKです</li>
+        </ul>
+      </section>
+
+      <!-- 目的と達成してほしいこと -->
+      <section>
+        <h3>本日の趣旨</h3>
+        <ul>
+          <li>ChatGPTを使ってみる</li>
+          <li>実際に“動くもの”を作り、そこから改良してみる</li>
+          <li>HTML/JavaScriptについて少し理解する</li>
+        </ul>
+        <p>「説明を受けて理解する」ではなく「作って改良して達成感を得る」が趣旨です</p>
+      </section>
+
+      <!-- タイムテーブル -->
+      <section>
+        <h3>タイムテーブル</h3>
+        <ul>
+          <li>13:00 - 説明</li>
+          <li>13:30 - 作業開始</li>
+          <li>17:30 - 発表</li>
+          <li>18:00 - 懇親会(ノリで)</li>
+        </ul>
+      </section>
+
+      <!-- 準備 -->
+      <section>
+        <h3>準備</h3>
+        <ol>
+          <li>ChatGPTにユーザ登録しましょう<br>
+            ・@bbs.co.jp のメールアドレスで登録<br>
+            ・またはプライベートブラウザを使い、個人のGoogleアカウントでログイン</li>
+          <li>TeamsのショートカットをOneDriveに作成してもらいます</li>
+        </ol>
+      </section>
+
+      <!-- 基礎知識 (1/2) -->
+      <section>
+        <h3>基礎知識 (1/2)</h3>
+        <ul>
+          <li>生成AIとは？<br>
+            人間が指示（プロンプト）を入力すると、それに応じたレスポンスを生成するAI。<br>
+            例：ChatGPT、Copilot、Gemini
+          </li>
+          <li>生成AIの種類<br>
+            文章生成AI: 文章→[生成AI]→文章　ChatGPTなど
+            画像生成AI: 文章→[生成AI]→画像　Midjourneyなど
+            動画生成AI: 文章→[生成AI]→動画　Soraなど
+          </li>
+
+          <li>プロンプトとレスポンス<br>
+            ・プロンプト：AIに与える指示・質問<br>
+            ・レスポンス(アウトプット、出力、結果)：AIが返す回答
+          </li>
+        </ul>
+      </section>
+
+      <!-- 基礎知識 (2/2) -->
+      <section>
+        <h3>基礎知識 (2/2)</h3>
+        <ul>
+          <li>HTML：Webページの内容と構造を記述<br/>&lt;p&gt;文章（パラグラフのp）&lt;/p&gt;<br/>&lt;h1&gt;1番大きい見出し（ヘッダーのh）&lt;/h1&gt;</li>
+          <li>JavaScript：Webページの動きを記述<br/>ライブラリを積極的に使いましょう！</li>
+          <li>Webページ（Webサイト、ホームページ）：HTMLファイルをWebの仕組みで表示したもの</li>
+        </ul>
+        <p>不安だとは思いますが、いまはこれくらいのインプットで十分です！</p>
+      </section>
+
+      <!-- (参考)Webの仕組み1 -->
+      <section>
+        <h3>(参考)Webの仕組み1</h3>
+        <p>想像してください。健康診断のメニューについて、電話で病院に連絡するシーンです。</p>
+        <ul>
+          <li>あなたが電話で病院に連絡します。「健康診断のメニューを教えてください。」</li>
+          <li>病院の人は口頭でメニューを読み上げます。「Aコースは30,000円、Bコースは60,000円です。」</li>
+          <li>あなたは、回答内容をメモに書き写します。</li>
+        </ul>
+       </section>
+
+      <!-- (参考)Webの仕組み2 -->
+      <section>
+        <h3>(参考)Webの仕組み2</h3>
+        <p>今度は、健康診断のメニューについて、病院のWebサイトを表示するシーンです。</p>
+        <ul>
+          <li>WebブラウザがHTTP(仕組み)で病院のサーバーに連絡します。<br>
+            「GET /健康診断メニュー.html HTTP/1.0」</li>
+          <li>病院のサーバーはhtmlファイルを返します。<br>
+            「<code>&lt;p&gt;Aコースは30,000円&lt;/p&gt;&lt;p&gt;Bコースは60,000円&lt;/p&gt;</code>」</li>
+          <li>Webブラウザは、回答内容を画面に表示します。</li>
+        </ul>
+        <p>言いたいこと: Webサイトを作るには、HTMLファイルをWebサーバーに置けばいい</p>
+      </section>
+
+      <!-- (参考)ちなみに -->
+      <section>
+        <h3>(参考)ちなみに</h3>
+        <ul>
+          <li>このスライドはChatGPTに相談して作成しました。</li>
+          <li>GitHub Pagesという機能を使えば、HTMLファイルをローカルではなくURLで公開できます。</li>
+        </ul>
+      </section>
+    </section>
+
+    <!-- ハンズオン セクション -->
+    <section>
+      <!-- 見出しスライド -->
+      <section>
+        <h2>ハンズオンセクション</h2>
+        <h3>13:20～13:50</h3>
+        <p>まずはChatGPTを使って、簡単なWebページを作成する流れを体験しましょう</p>
+        <p>↓矢印で次のスライドへ</p>
+      </section>
+
+      <!-- ハンズオンの説明 -->
+      <section>
+        <h3>ハンズオンの説明</h3>
+        <p>「自己紹介」や「今の仕事紹介」の内容をWebサイトにしてみましょう。</p>
+        <p>進め方（サイクル）:</p>
+        <ol>
+          <li>ChatGPTに表示したい内容を書く</li>
+          <li>ChatGPTにブラッシュアップさせる</li>
+          <li>ChatGPTにHTMLとして出力させる</li>
+          <li>HTMLをブラウザで確認</li>
+          <li>手直しや追加の指示 → 2～4を繰り返す</li>
+        </ol>
+        <p>やりたいことをAIに伝えながら作成を進めていく体験をしてみましょう。</p>
+      </section>
+
+      <!-- ハンズオンの例見せる -->
+      <section>
+        <h3>ハンズオンの例</h3>
+        <p>こんな感じの自己紹介ページが作れます</p>
+      </section>
+
+      <!-- ハンズオンの作成タイム -->
+      <section>
+        <h3>ハンズオンの作成タイム(15分間！)</h3>
+        <p>各自、手順に沿ってページを作成しましょう。</p>
+        <p>途中でわからないことや困ったことがあれば、遠慮なく相談してください。</p>
+      </section>
+
+      <!-- ハンズオンの発表タイム -->
+      <section>
+        <h3>ハンズオンの発表タイム</h3>
+        <p>せっかくなので、皆さんが作ったページを共有しましょう！</p>
+        <p>簡単に、<strong>「工夫した点」「苦労した点」</strong>などを紹介してください。</p>
+      </section>
+
+      <!-- メインのチームの発表 -->
+      <section>
+        <h3>メインのチームの発表（ハンズオン後）</h3>
+        <p>ハンズオンでの知見を活かして、次はチームごとに本番のテーマへ移行します。</p>
+      </section>
+    </section>
+
+    <!-- メイン セクション -->
+    <section>
+      <!-- 見出しスライド -->
+      <section>
+        <h2>メインセクション</h2>
+        <h3>13:50～17:20</h3>
+        <p>HTMLファイルを作り込んでみよう！</p>
+        <p>↓矢印で次のスライドへ</p>
+      </section>
+
+      <!-- メインの説明 -->
+      <section>
+        <h3>メインの説明</h3>
+        <p>「じゃあさっそく始めてください」と言われても、何から手を付けるか迷いますよね。<br>
+           そこで今回のメインテーマを用意しました！</p>
+      </section>
+
+      <!-- メインのテーマの発表 -->
+      <section>
+        <h3>メインのテーマ</h3>
+        <p>メインテーマは<span style="font-size:1.2em; font-weight:bold;">「動物」</span>です！</p>
+        <p>「動物」から連想ゲームのように自由にアイデアを出し、面白いHTMLを作成してみてください。</p>
+        <ul>
+          <li>例：好きな動物の紹介サイト</li>
+          <li>動物を擬人化して職業紹介</li>
+          <li>動物写真のギャラリー</li>
+          <li>動物の言葉への翻訳機</li>
+          <li>etc...</li>
+        </ul>
+      </section>
+
+      <!-- メインの進め方アドバイス (1/2) -->
+      <section>
+        <h3>メインの進め方アドバイス (1/2)</h3>
+        <ul>
+          <li>チーム内でプロンプトを共有<br/>
+            ・TeamsのチャネルでChatGPTのリンク、画面キャプチャ、プロンプトを共有しよう</li>
+          <li>ファイルの保存の工夫<br>
+            ・13:20 の時点で作成したhtmlを「<strong>1320_豊岡.html</strong>」と保存すると時刻と制作者がわかりやすいです。</li>
+        </ul>
+      </section>
+
+      <!-- メインの進め方アドバイス (2/2) -->
+      <section>
+        <h3>メインの進め方アドバイス (2/2)</h3>
+        <ul>
+          <li>進め方(方針)を相談する<br/>
+           ・</li>
+          <li>発表の準備は大事ですよ<br>
+            発表って意外と大変でしたよね。<br>
+            どう発表するかも考えておくと良い結果につながります。
+          </li>
+        </ul>
+      </section>
+
+      <!-- メインの作成タイム -->
+      <section>
+        <h3>メインの作成タイム</h3>
+        <p>17:20までに作成をお願いします。</p>
+        <p>発表練習もしておくとスムーズです。<br>
+          ・何を考えて作ったか<br>
+          ・完成物の特徴や工夫した点<br>
+          ・苦労した点や、もっと時間があればできること</p>
+      </section>
+
+      <!-- メインの発表タイム -->
+      <section>
+        <h3>メインの発表タイム</h3>
+        <p>それぞれのチームで作ったWebページを発表します。<br>
+           良いところや面白いところをぜひ共有してください。</p>
+      </section>
+
+      <!-- メインの振り返りタイム -->
+      <section>
+        <h3>メインの振り返りタイム</h3>
+        <p>10分ほどで紙に振り返りをお願いします。</p>
+        <ul>
+          <li>できたこと、できなかったこと</li>
+          <li>できなかった理由、できるようにするにはどうすればよいか</li>
+        </ul>
+        <p>最後に皆さん一言ずつ感想をお願いします。</p>
+      </section>
+    </section>
+
+    <!-- 最後のスライド -->
+    <section>
+      <h2>最後に</h2>
+      <p>皆さんは第1回目の卒業生とさせてください！ 参加できなかった方にも、今回得たことをぜひ伝えて欲しいです。</p>
+      <p>二回目の参加ももちろん大歓迎ですが、<br>
+         二回目に運営側として活動してみたい方はいますか？</p>
+      <p>運営をバトンリレーしていきたいですのでぜひ。</p>
+    </section>
+
+  </div>
+</div>
+
+<!-- Reveal.jsの本体 -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    // 必要に応じてオプションを設定可能
+    // controls: true,
+    // progress: true,
+    // hash: true,
+  });
+</script>
+</body>
+</html>
